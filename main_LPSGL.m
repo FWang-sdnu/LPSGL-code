@@ -14,14 +14,14 @@ options.PCARatio = 0.95;
 [eigvector,eigvalue,meanData,new_data] = PCA(X,options);
 X = new_data;
 
-%% ´¦ÀíÊı¾İ¼¯
+%% å¤„ç†æ•°æ®é›†
 label = unique (Y);
 nlabel = histc (Y,label);
 c =length(label);
 
 Result = zeros (1,20);
 for iter = 1 :20
-%% 1.Ëæ»ú»®·ÖÊı¾İ¼¯
+%% 1.éšæœºåˆ’åˆ†æ•°æ®é›†
 Xl = [];
 Yl = [];
 Xu = [];
@@ -53,7 +53,7 @@ for i = 1:c
     Yu = [Yu;YYY(p+1:nn,:)];
     end
     
-    %% 2.test part »®·Ö
+    %% 2.test part åˆ’åˆ†
     Xtest = [Xtest;XXX(nn+1:nlabel(i),:)];
     Ytest = [Ytest;YYY(nn+1:nlabel(i),:)]; 
             
