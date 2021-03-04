@@ -68,13 +68,13 @@ end
     Nu = size(Xu,1);
     NN = Nl+Nu;
     
-    YYY = zeros(NN,c);
+    YYy = zeros(NN,c);
     YYl = zeros(Nl,c);
     YYu = zeros(Nu,c);
     YYtrain = zeros(NN,c);
     YYtest = zeros(n-NN,c);
 for k = 1:n
-   YYY(k,Y(k,1)) = 1;
+   YYy(k,Y(k,1)) = 1;
 end
 for kk = 1:Nl
     YYl(kk,Yl(kk,1)) = 1;
